@@ -19,3 +19,5 @@ class Item(models.Model):
     created_by = models.ForeignKey(User, related_name='items', on_delete=models.CASCADE) # If the user is deleted all the items will be deleted
     created_at = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self) -> str:
+            return self.name
